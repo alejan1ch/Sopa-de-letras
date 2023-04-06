@@ -47,11 +47,23 @@ def find_word(matrix, word):
                     # Si se han encontrado todas las letras de la palabra en una línea vertical hacia abajo, devuelve las coordenadas
                     return [[i+x, j] for x in range(k)]
                 k = 1 # Resetea el contador k
+                while k < len(word) and i-k >= 0 and matrix[i-k][j] == word[k]:
+                    k += 1 # Incrementa k mientras las letras de la palabra coinciden con las letras en la matriz
+                if k == len(word):
+                    # Si se han encontrado todas las letras de la palabra en una línea vertical hacia arriba, devuelve las coordenadas
+                    return [[i-x, j] for x in range(k)]
+                k = 1 # Resetea el contador k
                 while k < len(word) and j+k < len(matrix[i]) and matrix[i][j+k] == word[k]:
                     k += 1 # Incrementa k mientras las letras de la palabra coinciden con las letras en la matriz
                 if k == len(word):
                     # Si se han encontrado todas las letras de la palabra en una línea horizontal hacia la derecha, devuelve las coordenadas
                     return [[i, j+x] for x in range(k)]
+                k = 1 # Resetea el contador k
+                while k < len(word) and j-k >= 0 and matrix[i][j-k] == word[k]:
+                    k += 1 # Incrementa k mientras las letras de la palabra coinciden con las letras en la matriz
+                if k == len(word):
+                    # Si se han encontrado todas las letras de la palabra en una línea horizontal hacia la izquierda, devuelve las coordenadas
+                    return [[i, j-x] for x in range(k)]
                 k = 1 # Resetea el contador k
                 while k < len(word) and i+k < len(matrix) and j+k < len(matrix[i]) and matrix[i+k][j+k] == word[k]:
                     k += 1 # Incrementa k mientras las letras de la palabra coinciden con las letras en la matriz
