@@ -30,4 +30,46 @@ las coordenadas `[x, y]` de las letras encontradas.
 ## Restricciones
 
 Recuerde que solo se pueden hacer uniones en línea recta de manera vertical, horizontal y diagonal.
+
+## Cómo utilizar
+
+Para utilizar el proyecto, sigue los siguientes pasos:
+
+### Clonar el repositorio
+
+1. Abre una terminal y dirígete al directorio en el que deseas clonar el repositorio.
+2. Ejecuta el siguiente comando: `git clone <URL del repositorio>`.
+3. Después de clonar el repositorio, ingresa al directorio del proyecto utilizando el comando `cd <nombre del proyecto>`.
+
+### Configurar el entorno virtual
+
+1. Ejecuta el siguiente comando para crear un entorno virtual: `python -m venv <nombre del entorno virtual>`.
+2. Activa el entorno virtual ejecutando `source <nombre del entorno virtual>/bin/activate` (en Linux o MacOS) o `<nombre del entorno virtual>\Scripts\activate` (en Windows).
+3. Ahora, debes instalar las dependencias utilizando el archivo `requirements.txt`. Ejecuta el siguiente comando: `pip install -r requirements.txt`.
+
+### Ejecutar la aplicación
+
+1. Ejecuta el siguiente comando: `flask run`.
+2. Abre un navegador y dirígete a la dirección `http://localhost:5000/game`.
+3. En el apartado matriz, ingresa la matriz de letras que deseas utilizar.
+```
+[
+[c, g, h, t],
+[a, a, a, y],
+[s, z, p, g],
+[a, o, b, a]
+]
+```
+
+4. En el apartado palabras, ingresa las palabras que deseas buscar en la matriz.
+
+```
+[casa, capa]
+```
+
+5. Finalmente, presiona el botón "resolver" para obtener los resultados en formato JSON.
+
+#Autor de la resolucion del problema
+Alejandro Cruz Hernandez
+
     
