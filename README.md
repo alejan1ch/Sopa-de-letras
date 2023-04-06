@@ -24,7 +24,8 @@ Capa: [[0, 0], [1, 1], [2, 2], [3, 3]]
 ```
 ## Requisitos del algoritmo
 
-El algoritmo debe tomar las palabras de búsqueda y recorrer la matriz de letras para devolver las coordenadas `[x, y]` de las letras encontradas.
+El algoritmo debe tomar las palabras de búsqueda y recorrer la matriz de letras para devolver 
+las coordenadas `[x, y]` de las letras encontradas.
 
 ## Restricciones
 
